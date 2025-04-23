@@ -43,6 +43,4 @@ router.delete('/:contactId',
     isValidId,
     ctrlWrapper(deleteContactController));
 
-// router.get('/', ctrlWrapper(getContactController));
-
 export default router;
