@@ -7,5 +7,5 @@ export const getEnvVar = (name, defaultValue) => {
 
     if (defaultValue) return defaultValue;
 
-    throw new Error('Cannot find process.env[${name}]');
+    throw new Error(`Cannot find process.env[${name}]`);
 };

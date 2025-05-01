@@ -66,6 +66,7 @@ export const updateContact = async (contactId, userId, payload, options = {}) =>
         payload,
         {
             new: true,
+            runValidators: true,
             includeResultMetadata: true,
             ...options,
         },
