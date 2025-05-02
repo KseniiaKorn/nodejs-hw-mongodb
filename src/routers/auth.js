@@ -7,8 +7,8 @@ import { loginUserSchema } from "../validation/auth.js";
 import { loginUserController } from "../controllers/auth.js";
 import { logoutUserController } from "../controllers/auth.js";
 import { refreshUserSessionController } from "../controllers/auth.js";
-import { requestResetEmailSchema } from "../validation/auth.js";
-import { requestResetEmailController } from "../controllers/auth.js";
+import { sendResetEmailSchema } from "../validation/auth.js";
+import { sendResetEmailController } from "../controllers/auth.js";
 import { resetPasswordSchema } from "../validation/auth.js";
 import { resetPasswordController } from "../controllers/auth.js";
 
@@ -37,13 +37,13 @@ router.post(
 );
 
 router.post(
-    '/request-reset-email',
-    validateBody(requestResetEmailSchema),
-    ctrlWrapper(requestResetEmailController),
+    '/send-reset-email',
+    validateBody(sendResetEmailSchema),
+    ctrlWrapper(sendResetEmailController),
 );
 
 router.post(
-    '/reset-password',
+    '/reset-pwd',
     validateBody(resetPasswordSchema),
     ctrlWrapper(resetPasswordController),
 );

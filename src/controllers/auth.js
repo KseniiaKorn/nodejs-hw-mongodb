@@ -76,11 +76,11 @@ export const refreshUserSessionController = async (req, res) => {
     });
 };
 
-export const requestResetEmailController = async (req, res) => {
+export const sendResetEmailController = async (req, res) => {
     await sendResetToken(req.body.email);
     res.json({
+        message: 'Reset password email has been successfully sent',
         status: 200,
-        message: 'Reset password email was successfully sent!',
         data: {},
     });
 };
